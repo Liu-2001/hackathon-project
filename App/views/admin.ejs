@@ -9,12 +9,25 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
   </head>
   <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <div id="select-login">
-      <a href="/signup"><button type="button" class="btn btn-primary">Sign up as customer</button></a>
-      <a href="/login"><button type="button" class="btn btn-primary">Log in as customer</button></a>
-      <a href="/admin"><button type="button" class="btn btn-primary">Log in as admin</button></a>
-    </div>
+  <h1>customer list</h1>
+		<table class="table">
+			<thead>
+				<tr>
+					<th scope="col">No.</th>
+					<th scope="col">Name</th>
+					<th scope="col">NRIC/FIN</th>
+				</tr>
+			</thead>
+			<tbody>
+				<% for(var i=1; i<=data.length; i++) { %>
+				<tr>
+					<td><%= i%></td>
+					<td><%= data[i - 1].name%></td>
+					<td><%= data[i - 1].nric%></td>
+				</tr>
+				<% } %>
+			</tbody>
+		</table>
+	<a href="/"><button type="button" class="btn btn-primary">Return to home</button></a>
   </body>
 </html>

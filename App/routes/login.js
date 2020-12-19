@@ -3,12 +3,12 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('signup', { title: 'Customer signup', username: 'unknown' });
+  //var userid = req.params.userid;
+  res.render('login', { title: 'login' });
 });
 
 router.post('/', function(req, res, next) {
-  var username = req.body.username;
-  //res.render('signup', { title: 'Customer signup', username: username });
+  var nric = req.body.nric;
   res.redirect('/information');
 })
 
