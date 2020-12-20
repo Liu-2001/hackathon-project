@@ -12,38 +12,38 @@
     <h1><%= title %></h1>
     <p>Please check the following information. If anything is wrong, you may delete and sign up again.</p>
     <div class="form-group">
-      <table border="1">
+      <table border="1" class="table">
         <tr>
           <td>Name</td>
-          <td></td>
+          <td><%= username %></td>
         </tr>
         <tr>
           <td>NRIC/FIN</td>
-          <td></td>
+          <td><%= nric %></td>
         </tr>
         <tr>
           <td>Age</td>
-          <td></td>
+          <td><%= age %></td>
         </tr>
         <tr>
           <td>Career</td>
-          <td></td>
+          <td><%= career %></td>
         </tr>
         <tr>
           <td>Diabetes</td>
-          <td></td>
+          <td><%= diabetes === true ? 'Yes' : 'No' %></td>
         </tr>
         <tr>
           <td>Cancer</td>
-          <td></td>
+          <td><%= cancer === true ? 'Yes' : 'No' %></td>
         </tr>
         <tr>
           <td>Heart disease</td>
-          <td></td>
+          <td><%= heartDisease === true ? 'Yes' : 'No' %></td>
         </tr>
         <tr>
           <td>Pregnancy</td>
-          <td></td>
+          <td><%= pregnancy === true ? 'Yes' : 'No' %></td>
         </tr>
       </table>
     </div>
