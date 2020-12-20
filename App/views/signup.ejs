@@ -18,10 +18,16 @@
       <div class="form-group">
         <label for="nric">NRIC/FIN: </label>
         <input type="text" class="form-control" id="nric" name="nric" placeholder="Enter your NRIC/FIN">
+        <% if (nricErr === true) { %>
+          <small id="nricErr" class="err">This NRIC/FIN has already registered</small>
+        <% } %>
       </div>
       <div class="form-group">
         <label for="age">Age: </label>
         <input type="number" step="1" class="form-control" id="age" name="age" placeholder="Enter your age">
+        <% if (ageErr === true) { %>
+          <small id="ageErr" class="err">Age must be positive integer</small>
+        <% } %>
       </div>
       <div class="form-group">
         <label for="career">Career: </label>
@@ -46,19 +52,23 @@
         <label for="cancer">No</label>
       </div>
       <div class="form-group">
-         <label>Do you have heart disease? </label>
-         <input type="radio" id="heart-disease" name="heart-disease" value="true">
-         <label for="heart-disease">Yes</label>
-         <input type="radio" id="heart-disease" name="heart-disease" value="false">
-         <label for="heart-disease">No</label>
+        <label>Do you have heart disease? </label>
+        <input type="radio" id="heart_disease" name="heart_disease" value="true">
+        <label for="heart_disease">Yes</label>
+        <input type="radio" id="heart_disease" name="heart_disease" value="false">
+        <label for="heart_disease">No</label>
       </div>
       <div class="form-group">
-         <label>Do you have pregnancy? </label>
-         <input type="radio" id="pregnancy" name="pregnancy" value="true">
-         <label for="pregnancy">Yes</label>
-         <input type="radio" id="pregnancy" name="pregnancy" value="false">
-         <label for="pregnancy">No</label>
+        <label>Are you pregnant? </label>
+        <input type="radio" id="pregnancy" name="pregnancy" value="true">
+        <label for="pregnancy">Yes</label>
+        <input type="radio" id="pregnancy" name="pregnancy" value="false">
+        <label for="pregnancy">No</label>
       </div>
+      <% if (emptyErr === true) { %>
+        <small id="emptyErr" class="err">All fields must be filled</small>
+      <% } %>
+      <br />
       <button type="submit" class="btn btn-primary">Submit</button>
     </form>
   </body>
