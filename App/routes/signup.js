@@ -122,7 +122,6 @@ router.post('/', function(req, res, next) {
       nricErr = true;
     }
     if (hasErr) {
-      console.log("has err!!");
       renderPage(res);
     } else {
       var currentDate = new Date();
