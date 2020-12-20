@@ -15,6 +15,7 @@ var heartDisease;
 var pregnancy;
 
 var select_query = 'SELECT * FROM customers WHERE nric=$1';
+var delete_query = 'DELETE FROM customers WHERE nric=$1';
 
 var renderPage = (res) => {
   res.render('information', {
@@ -46,8 +47,13 @@ router.get('/:nric', function(req, res, next) {
   })
 });
 
-router.post('/', function(req, res, next) {
-  res.redirect('/');
+router.post('/:nric/delete', function(req, res, next) {
+  nric = req.params.nric;
+  console.log("here");
+  pool.query(delete_query, [nric], (err, data) => {
+    console.log(err);
+    res.redirect('../../');
+  })
 })
 
 module.exports = router;

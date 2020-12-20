@@ -127,7 +127,7 @@ router.post('/', function(req, res, next) {
       var currentDate = new Date();
       pool.query(insert_query, [username, nric, age, career, getStringDate(currentDate), getStringTime(currentDate), hasDiabetes, hasCancer, hasHeartDisease, hasPregnancy], (err, data) => {
         console.log(err);
-        res.redirect('/information');
+        res.redirect('/information/' + nric);
       })
     }
   })
