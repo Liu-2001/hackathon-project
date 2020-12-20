@@ -47,7 +47,9 @@
         </tr>
       </table>
     </div>
-    <a href="/"><button id = "delete" type="button" class="btn btn-primary">Delete</button></a>
-    <a href="/"><button type="button" class="btn btn-primary">Return to home</button></a>
+    <form id="html_form" action="<%=nric%>/delete" role="form" method="post">
+      <button id = "delete" type="submit" class="btn btn-primary">Delete</button>
+      <a href="/"><button type="button" class="btn btn-primary">Return to home</button></a>
+    </form>
   </body>
 </html>
