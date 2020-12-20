@@ -10,11 +10,12 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <div id="select-login">
-      <a href="/signup"><button type="button" class="btn btn-primary">Sign up as customer</button></a>
-      <a href="/login"><button type="button" class="btn btn-primary">Log in as customer</button></a>
-      <a href="/admin"><button type="button" class="btn btn-primary">Log in as admin</button></a>
-    </div>
+    <form id="html_form" role="form" method="post" action="">
+      <div class="form-group">
+        <label for="nric">NRIC/FIN: </label>
+        <input type="text" class="form-control" id="nric" name="nric" placeholder="Enter your NRIC/FIN">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
   </body>
 </html>

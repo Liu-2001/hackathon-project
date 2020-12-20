@@ -10,11 +10,44 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-    <div id="select-login">
-      <a href="/signup"><button type="button" class="btn btn-primary">Sign up as customer</button></a>
-      <a href="/login"><button type="button" class="btn btn-primary">Log in as customer</button></a>
-      <a href="/admin"><button type="button" class="btn btn-primary">Log in as admin</button></a>
+    <p>Please check the following information. If anything is wrong, you may delete and sign up again.</p>
+    <div class="form-group">
+      <table border="1">
+        <tr>
+          <td>Name</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>NRIC/FIN</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Age</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Career</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Diabetes</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Cancer</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Heart disease</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td>Pregnancy</td>
+          <td></td>
+        </tr>
+      </table>
     </div>
+    <a href="/"><button id = "delete" type="button" class="btn btn-primary">Delete</button></a>
+    <a href="/"><button type="button" class="btn btn-primary">Return to home</button></a>
   </body>
 </html>

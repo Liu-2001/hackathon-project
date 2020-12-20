@@ -3,8 +3,11 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  //var userid = req.params.userid;
-  res.render('index', { title: 'Customer' });
+  res.render('information', { title: 'Information' });
 });
+
+router.post('/', function(req, res, next) {
+  res.redirect('/');
+})
 
 module.exports = router;
