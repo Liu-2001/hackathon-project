@@ -14,8 +14,12 @@
       <div class="form-group">
         <label for="nric">NRIC/FIN: </label>
         <input type="text" class="form-control" id="nric" name="nric" placeholder="Enter your NRIC/FIN">
+        <% if (nricErr === true) { %>
+          <small id="nricErr" class="err">You are not registered yet</small>
+        <% } %>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
+      <a href="/"><button type="button" class="btn btn-secondary">Back</button></a>
     </form>
   </body>
 </html>
